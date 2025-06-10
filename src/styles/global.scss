@@ -1,0 +1,104 @@
+@import './variables.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;700&family=Inter:wght@300;400;500;700&display=swap');
+
+:root {
+  --bg: #fcfcfc;
+  --card-bg: #ffffff;
+  --text-main: #121212;
+  --text-muted: #575757;
+  --year-color: #9b4b4b;
+  --accent-line: #ab8956;
+  --icon-color: #121212;
+  --info-h: 70px;
+  --font-cormorant: 'Cormorant SC', serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+
+%heading-h1 {
+  font-family: var(--font-cormorant);
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+%caption-bold-12 {
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+%paragraph-base-light {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+%paragraph-big-light {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 16px;
+}
+
+@mixin paragraph-big-medium {
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+
+@mixin heading-h2 {
+  font-family: var(--font-cormorant);
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+@mixin caption-bold-8 {
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+@mixin paragraph-small-light {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 12px;
+}
+
+body[data-theme='light'] {
+  --bg: #fcfcfc;
+  --card-bg: #ffffff;
+  --text-main: #121212;
+  --text-muted: #575757;
+  --year-color: #9b4b4b;  
+  --accent-line: #9B4B4B;
+  --icon-color: #121212; 
+  --pagination: rgba(18, 18, 18, 0.05);
+  --pagination2: #9C9C9C;
+  --icon-lupa: #575757;
+  --placeholder: #9C9C9C;
+}
+
+body[data-theme='dark'] {
+  --bg: #121212;
+  --card-bg: #121212;
+  --text-main: #DEDEDE;
+  --text-muted: #DEDEDE;
+  --year-color: #ab8956;   
+  --accent-line: #ab8956;  
+  --icon-color: #ffffff; 
+  --icon-lupa: #DEDEDE;
+  --pagination: #1A1818;
+  --pagination2: #9C9C9C;
+  --placeholder: #575757;
+}
+
+
+body {
+  background: var(--bg);
+  color: var(--text-main);
+  transition: background .3s ease, color .3s ease;
+}
